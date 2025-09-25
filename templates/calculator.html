@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電卓アプリ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/calculator.css') }}">
+  </head>
+  <body>
+    <main>
+      <section class="calculator" aria-label="電卓">
+        <div
+          id="display"
+          class="display"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          0
+        </div>
+        <div class="keys" role="group" aria-label="キー">
+          <button class="key-utility" data-action="clear">AC</button>
+          <button class="key-utility" data-action="backspace" aria-label="1文字削除">⌫</button>
+          <button class="key-utility" data-action="percent">%</button>
+          <button class="key-operator" data-operator="/">÷</button>
+
+          <button class="key-number" data-value="7">7</button>
+          <button class="key-number" data-value="8">8</button>
+          <button class="key-number" data-value="9">9</button>
+          <button class="key-operator" data-operator="*">×</button>
+
+          <button class="key-number" data-value="4">4</button>
+          <button class="key-number" data-value="5">5</button>
+          <button class="key-number" data-value="6">6</button>
+          <button class="key-operator" data-operator="-">−</button>
+
+          <button class="key-number" data-value="1">1</button>
+          <button class="key-number" data-value="2">2</button>
+          <button class="key-number" data-value="3">3</button>
+          <button class="key-operator" data-operator="+">＋</button>
+
+          <button class="key-utility" data-action="sign">±</button>
+          <button class="key-number" data-value="0" data-action="zero" aria-label="ゼロ">0</button>
+          <button class="key-number" data-action="decimal">.</button>
+          <button class="key-equals" data-action="calculate">＝</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/calculator.js') }}" defer></script>
+  </body>
+</html>
